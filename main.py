@@ -28,16 +28,16 @@ def decrypt(text, shift):
 
 while True:
     choice = int(input(
-        "What would you like to do?\n1. Encrypt\n2. Decrypt\n0.Quit\nEnter your choice: "))
+        "What would you like to do?\n1. Encrypt\n2. Decrypt\n0. Quit\nEnter your choice: "))
 
     if choice == 1:
-        text = input("Enter the text to encrypt: ")
+        text = input("Enter the text to encrypt: ").lower()
         shift = int(input("Enter the shift: "))
         encrypted_text = encrypt(text, shift)
         print(f"Your encrypted text is '{encrypted_text}'")
 
     elif choice == 2:
-        text = input("Enter the text to decrypt: ")
+        text = input("Enter the text to decrypt: ").lower()
         shift = int(input("Enter the shift: "))
         decrypted_text = decrypt(text, shift)
         print(f"Your decrypted text is '{decrypted_text}'")
